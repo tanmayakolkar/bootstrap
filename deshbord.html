@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <title>DeshBoard</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/mdb.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+	<!----main navbar------>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container">
+		<a href="#" class="navbar-brand text-warning">
+			<i class="fa fa-bug" aria-hidden="true"></i>
+            NAYRA'S Technologies
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+		 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		 	<ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                <i class="fa fa-university" aria-hidden="true"></i>
+                DashBoard</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+
+                Task</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                <i class="fa fa-line-chart" aria-hidden="true"></i>
+              Catagories</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                	<i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Employee</a>
+              </li>
+       </ul>   
+       <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                <i class="fa fa-university" aria-hidden="true"></i>
+                Tanmay</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="#">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+
+                LogOut</a>
+              </li>
+       </ul>           
+			
+		 </div>
+
+	</div>
+</nav>
+<!----------Heading section--------------------------->
+<section class="bg-primary text-white">
+	<div class="container">
+		<div class="row">
+			<h1>
+				<i class="fa fa-home"></i>
+			Employee</h1>
+			 
+		</div>
+		
+	</div>
+</section>
+<!-----end heading section-------------------------------->	
+
+<!----------Three Heading--------------------------->
+<section class=" p-3 bg-light text-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4  ">
+				<button class="bg bg-danger btn-block" data-toggle="modal" data-target="#task_modal">
+				
+					<i class="fa fa-laptop"> </i>
+					Add Task
+				</button>
+				
+			</div>
+					<div class="col-md-4 ">
+				<button class="bg bg-warning btn-block">
+				
+					<i class="fa fa-laptop"> </i>
+					Add Cataogory
+				</button>
+				
+			</div>
+						<div class="col-md-4 ">
+				<button class="bg bg-success btn-block">
+				
+					<i class="fa fa-laptop"> </i>
+					Add Employee
+				</button>
+				
+			</div>
+
+			 
+		</div>
+		
+	</div>
+</section>
+<!-----end  Three heading section-------------------------------->	
+<!----AddTask work------------------------------------------->
+<div class="modal" id="task_modal">
+	<div class="modal-dialog">
+		<div class="modal-content modal-lg">
+			<div class="modal-header bg-primary text-white">
+				<h3>Add Task</h3>
+				<button class="close" data-dismiss="modal">
+					<i class="fa fa-times-circle"></i>
+				</button>
+		    </div>
+			<div class="modal-body bg-light">
+				<form>
+					<div class="form-group">
+						<label class="form-check-label">Title</label>
+						<input type="text" name="" class="form-control" placeholder="Title">
+					</div>
+					<div class="form-group">
+						<label class="form-check-label">Category</label>
+						<select class="form-control">
+							<option value="">Select a category</option>
+							<option value="">Devlopment</option>
+							<option value="">Maintanied</option>
+							<option value="">Producion Suport</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label class="form-check-label">Images Uplode</label>
+						<input type="file" name="" class="form-control-file" placeholder="Title">
+						<small>maxsize 3000</small>
+				    </div>
+				    
+				    <div class="form-group">
+				    	<label class="form-check-label">Description</label>
+				    	<textarea name='editor1' rows="4" class="form-control" placeholder="Description">
+				    	</textarea>
+				    </div>
+				    <div>
+				    	<input type="submit" name="" class="btn btn-primary" value="Add-Task">
+				    	<a href="#" data-dismiss="modal" class="btn btn-dark">Close</a>
+				    </div>
+				
+				</form>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+</div>
+<!---------end task barwork----------------------------------->
+
+
+
+<!-----current task----------------------------------------->
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="card">
+					<div class="card-header bg-secondary text-white">
+						<h3>Current Task</h3>
+					</div>
+					<div class="card-body">
+						<table class="table table-hover text-center">
+							<thead class="bg-info">
+								<tr>
+									<th>Sno</th>
+									<th>Name</th>
+									<th>Email</th>
+									<th>TASK</th>
+									<th>lAVEL</th>
+									<th>CATAOGORY</th>
+									<th>Details</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>Tony</td>
+									<td>MAIL.TONY24@GMAIL.COM</td>
+									<td>DESIGN</td>
+									<td>3</td>
+									<td>OBC</td>
+									<td><a href="#" class="btn btn-outline-dark btn-sm">Details</a>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div><!---card-body---->
+				</div><!----card---->
+			</div><!-----col-9---->
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-header bg-primary text-white">
+						<div class="row">
+							<div class="col">
+								<i class="fa fa-bug"></i>
+								
+							</div>
+									<div class="col">
+										<h3>08</h3>
+										<p>Task</p>
+									</div>
+
+						  </div>
+						
+					</div>
+								<div class="card-footer  text-center">
+									<h3>View Details</h3>
+								</div>
+					
+				  </div>
+				  <div class="card mt-3">
+					<div class="card-header bg-primary text-white">
+						<div class="row">
+							<div class="col">
+								<i class="fa fa-bug"></i>
+								
+							</div>
+									<div class="col">
+										<h3>08</h3>
+										<p>Task</p>
+									</div>
+
+						  </div>
+						
+					</div>
+								<div class="card-footer  text-center">
+									<h3>View Details</h3>
+								</div>
+					
+				  </div>
+				  <div class="card mt-3">
+					<div class="card-header bg-primary text-white">
+						<div class="row">
+							<div class="col">
+								<i class="fa fa-bug"></i>
+								
+							</div>
+									<div class="col">
+										<h3>08</h3>
+										<p>Task</p>
+									</div>
+
+						  </div>
+						
+					</div>
+								<div class="card-footer  text-center">
+									<h3>View Details</h3>
+								</div>
+					
+				  </div>
+
+
+
+			</div>
+		</div><!----row----------->
+	</div><!--container-------------->	
+</section>
+<!-----end current task------------------------------------------>
+
+
+<!-------footer   task------------------------------------>
+<footer class="bg-secondary text-center">
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col">
+		<h1>copyright@2019,Nayra's TechNologies</h1>
+		<p>All Right Reserved</p>
+		<p class="text-info">Devloped & Maintanied<a href="#">Tanmay Akolkar</a></p>
+	    </div>
+	    </div>
+    </div>
+</footer>
+<!------end of footer task----------------------------------->
+
+
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/mdb.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>
